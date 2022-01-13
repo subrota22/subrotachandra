@@ -1,0 +1,233 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <style>
+          #bd{
+              background-image: linear-gradient(indigo , cyan , #454fff);
+          }
+      </style>
+      <!--Bootstrap Link-->
+      <link rel="stylesheet" href="css/bootstrap.min.css"/>
+      <!--CSS Link-->
+      <link rel="stylesheet" href="about.css"/>
+      <!--Fontawosome link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> About me</title>
+  </head>
+  <body id="bd">
+      <?php
+      session_start();
+      session_regenerate_id();
+      if($_SESSION['username']==true){
+?>
+<center>
+    <caption>
+       <marquee behavior="alternate" direction="none" id="top">
+        <p id="caption"> Hello everybody now I will introduce my self .</p>
+       </marquee>
+    </caption>
+    <br>
+    <center>
+        <div id="tool">
+            
+        <img src="picture/subrota2.PNG" alt="subrota chandra sharker" id="image"/>
+        <span id="img-text">hello i am subrota chandra sharker</span>
+        </div>
+    </center>
+    <br>
+<center>
+    <div class="navbar" align="left">
+      <a href="form.html" target="_blank">Contact Me </a>
+      <a href="../home.php" target="blank"> Visit my Website  </a>
+      <div class="dropdown-container">
+      <a class="dropdown-toggle"> 
+      Dropdown 
+      
+      </a> 
+      <div class="dropdown-content">
+      <br>
+      <a href="About Me.php" target="_blank" > About Me </a>
+      <a href="../contact_form.html" target="_blank" > Contact Me  </a>
+      <a href="../home.php" > Home  </a>
+      <a href="calculator.html" target="_blank">  software </a>
+      <a href="../logout.php" class="btn btn-danger p-10px"> Log Out</a>
+      
+      <br>
+      </div>
+      </div>
+      </div>
+  </center>
+  
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+     <i>My Educational Qualification:</i>
+     <br>   <br>
+     <table class="table table-bordered table-hover" id="table">
+  <thead class="bg-dark">
+    <th>
+     Board  Class:
+    </th>
+   
+    <th>
+        Passing Year:
+    </th>
+    <th>
+        GPA:
+    </th>
+         
+  </thead>
+ <tbody>
+         <tr>
+             <td>
+                 PSC
+             </td>
+             <td>2012</td>
+             <td>4.58</td>
+         </tr>
+         <tr>
+             <td>JSC</td>
+             <td>2015</td>
+             <td>3.85</td>
+         </tr> 
+      <tr>
+          <td> SSC from  Science </td>
+          <td>2018</td>
+          <td>4.06</td>
+      </tr>
+      <tr>
+        <td> HSC from Science </td>
+        <td>2021</td>
+        <td>4.08</td>
+    </tr>
+</tbody>
+     </table>
+</center>
+
+<br><br>
+<!--js imge start from here-->
+<center>
+  <div id="slider10"> 
+      <br>
+      <h2>javascript image slider </h2>
+      <p style="color: rgb(216, 231, 12); font-size: 18px; text-shadow: 2px 2px cadetblue;">
+        Here I have My family Images.
+    
+        </p>
+      <br>
+    <button onclick="prev()" class="btn btn-info prev">Prev</button>
+    &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;
+    <img src="picture/my father.PNG" alt="image" height="200" width="210" id="slider11" data-interval="2000"/>
+    &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;
+    <button onclick="next()"  class="btn btn-success next">Next</button>
+  <br><br>
+  </div>
+  <!--js imge ends from here-->
+</center>
+<br><br>
+<div>
+    <center>
+        About my personal information I have given below:
+        <br>
+        Please don't make any hesetation by this info.
+        <br><br>
+        <!--Table start from here-->
+        <table class="table table-bordered table-hover" style="background-color: darkcyan; color: rgb(212, 219, 219);" >
+           <thead  class="bg-dark">
+            <th>Facebook:</th>
+            <th>Email:</th>
+            <th>Phone  Number:</th>
+              <th>Skype:</th>
+           </thead>
+           <tbody>
+                 <tr>
+                <td>Subrota Chandra Sharker </td>
+                <td> itsectorcommunication@gmail.com </td>
+                <td>88 01750157867</td>
+                <td>Subrota Chandra Sharker </td>
+            </tr>
+                          
+           </tbody>
+        </table>
+<!--Table end from here-->
+    </center>
+</div>
+<br><br>
+
+  <div id="div2">
+      <center>
+          I have some wisdome about programming language such as fiction:
+          <br><br>
+          <!--list of page start-->
+    <div class="list">
+        <ul>
+            <li> <i class="fas fa-check-circle fa-3x text-info "> </i> html </li>
+            <li> <i class="fas fa-check-circle fa-3x text-info "> </i> css</li>
+            <li> <i class="fas fa-check-circle fa-3x text-success  "> </i> jquery</li>
+            <li>   <i class="fas fa-check-circle fa-3x text- success  "> </i>  <a href="calculator.html" target="_blank">  javascript </a></li>
+            <li> <i class="fas fa-check-circle fa-3x text-danger "> </i>  c++</li>
+            <li>  <i class="fas fa-check-circle fa-3x text-success  "> </i>  php</li>
+            <li>  <i class="fas fa-check-circle fa-3x text-success  ">  </i> bootstrap</li>
+            <li>  <i class="fas fa-check-circle fa-3x text-warning "> </i> java</li>
+            <li>  <i class="fas fa-check-circle fa-3x text-dark  "> </i> python</li>
+            <li> <i class="fas fa-check-circle fa-3x text-success  "></i>  mysql</li>
+            <li> <a href="canvas.html" target="_blank" rel="noopener noreferrer"> canvas 2d </a> </li>
+        </ul>
+    </div>
+    <br>
+    </div>
+      </center>
+      <!--list of page end--> 
+      <br><br>
+<!--Text of page -->
+      
+      <div id="txt4" align="right">
+       <b> Hello everybody I am Subrota Chandra Sharker .  </b>   My nationality is Bangladeshi 
+        <br>
+I was bron in 13/03/2001 in Berail Village at Joypurhat <b> destric</b>
+<br>
+I am not at all a vast experteist about the software <br> engineering.
+<br>
+The acctual think is I am a beginer in my programming life.
+<br>
+Recently I am study on Java , Python ,  calculas , flowchart ,  <br> Algorithm , Data Structure  and so on.
+<br>
+when I will finished this then <br> I will move forward to React , 3d , 4d  animation
+ and the actual Artificial Inteligent.
+<br>
+Thanks for stay with me till now please forgive me <br>
+ if i have some mistake 
+you can contact with  me by email 
+<br>
+and one think i would like that is <br>
+ "always belive in humanity and live for other" , <br>
+Take care of you one proverb gose that "Health is Wealth " . 
+<br><b>
+    Good By
+</b>
+      </div>
+  </div>
+  <center>
+      <a href="#top" style="text-decoration: none; color: rgb(239, 235, 243);">Go to top </a>
+  </center>
+  <div>
+      <!--Text of page end -->
+   <marquee behavior="scroll" direction="left">
+    Thanks for your time and consideration 
+   </marquee>
+  </div>
+
+  <script src="about.js"></script>
+       <?php }else{
+          header("location:../logout.php");
+       }
+
+       ?>
+  </body>
+  </html>

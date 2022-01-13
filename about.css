@@ -1,0 +1,221 @@
+#bd{
+background-image:linear-gradient(indigo , green , darkblue);
+color: lime;
+font-size: x-large;
+font-family: monospace;
+background-attachment: fixed;
+background-repeat: no-repeat;
+padding: 12px;
+background-size: cover;
+background-attachment: fixed;
+}
+ #txt4{
+     color: rgb(31, 207, 15);
+     font-size: xx-large;
+     font-family: fantasy;
+     text-align: center;
+     justify-content: center;
+     padding: 11px;
+     overflow: auto;
+     overflow-wrap: break-word;
+    text-shadow: 1px 2px blue;
+    transition: 2s;
+ }
+ #txt4:hover{
+transform: scale(1.1);
+ }
+   #table th{
+    background-color: rgb(13, 14, 13);
+    color: chartreuse;
+    font-size: x-large;
+    font-family: fantasy;
+    border:  2px solid green;
+   }
+    tr:nth-child(even){
+       background-color: indigo;
+   }
+   tr:nth-child(odd){
+       background-color: rgba(9, 124, 9, 0.6);
+   }
+   #caption{
+    background-color: rgb(5, 100, 78);
+    color: rgb(12, 102, 20);
+    font-size: x-large;
+    font-family: cursive;
+    padding: 12px; 
+    width: 653px;
+    border-radius: 24px;
+    animation-name: cap;
+    transition: 3s;
+   }
+   #div2{
+       color:chartreuse;
+       font-family: cursive;
+       text-shadow: 2px 1px red;
+   }
+   
+/*dropdown strat form here*/
+.navbar{
+    background-color: rgb(6, 43, 44);
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    float: right;
+    }
+    .navbar:hover{
+animation-delay: 2s;
+width: 100%;
+transition: width 2s  ;
+background-color: rgba(9, 207, 9,0.5);
+color: rgb(81, 255, 0);
+text-shadow: 2px 1px yellow;
+    }
+    .navbar a{
+    text-decoration: none;
+    color: rgb(11, 78, 187);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width:215px;
+    transition: 3s;
+    }
+    .dropdown-container{
+    display: inline;
+    position: relative;
+    }
+    .dropdown-content{
+    position:absolute;
+    top: 30px;
+    right: 0px;
+    background-color: cadetblue;
+    text-align: left;
+    min-width: 100px;
+    display: none;
+    transition: 3s;
+    }
+  
+    .dropdown-container:hover .dropdown-content{
+    display: block;
+    transition : 3s;
+  animation-delay: 2s;
+    }
+    .dropdown-content a:hover{
+    background-color: darkslategrey;
+    transition: 3s;
+    }
+    .dropdown-content a{
+        display: block;
+        }
+    /*dropdown ends form here*/
+ 
+        /*list start form here*/
+    .list{
+        background-color: blueviolet;
+        margin: 60px;
+        padding: 12px;
+        text-align: center;
+        color: brown;
+        text-transform: uppercase;
+        float: right;
+        transition: 2s;
+
+    }.list:hover{
+transform: scale(0.9);
+    }
+    .list li{
+        list-style-type: none;
+        padding: 34px;
+        lighting-color: chartreuse;
+        list-style-position:inside;
+        float: left;
+        text-shadow: 1px 2px green;
+    }
+    /*list ends form here*/
+
+                        /*image starts form here*/
+            #image{
+                border-radius: 50%;
+                border: 4px solid darkcyan;
+                height:178px;
+                width: 180px;
+            }
+            #image:hover{
+                transition-delay: 0s;
+                transition-duration: 2s;
+                transform: scale(0.8)
+                
+            }
+                      /*image starts form here*/
+        #image{
+            position: relative;
+        }
+       #tool  #img-text{
+            width: 345px;
+            border-radius: 15px;
+            padding: 6px;
+            align-items: center;
+            visibility: hidden;
+            position: absolute;
+            text-transform: uppercase;
+            color: rgb(227, 238, 227);
+            background-color: darkblue;
+            text-align: center;
+          
+        }
+        #tool:hover #img-text{
+            visibility: visible;
+            transition-duration: 2s;
+            width: 500px;
+        }
+        /*form caption starts */
+   #caption{
+    font-size: x-large;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color: rgb(43, 86, 226);
+    padding: 20px;
+    animation-name: text-animation;
+    animation-duration:  1s;
+    animation-iteration-count: 7;
+    text-align: center;
+    }
+    @keyframes text-animation {
+    from{
+font-size: 14px;
+    color: rgb(228, 21, 55);
+    transition-duration: 2s;
+    }
+    to{
+      font-size: 28px;
+    color: rgb(41, 224, 9);
+    transition-duration: 2s;
+    }
+    }
+       /*form caption ends */
+
+            /*slider image starts */
+       #slider11{
+        justify-content: center;
+        text-align: center;
+        border-radius: 50%;
+        border: 5px solid rgb(128, 0, 60);
+    }
+    #slider10{
+        background-color: darkblue;
+        margin: 50px;
+        padding: 20px;
+        transition: 4s;
+    }
+    #slider10:hover{
+        transform: scale(1.2);
+    }
+    .prev:focus{
+width: 120px;
+    }
+    .next:focus{
+width: 120px;
+    }
+   /*slider image ends */
+
+   .table-hover{
+       transition: 1s;
+   }
