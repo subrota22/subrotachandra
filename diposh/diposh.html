@@ -3,32 +3,37 @@
 <style>
     /* CSS for general styling */
 body {
-	display: flex;
 	height: 100vh;
-	justify-content: center;
-	align-items: center;
 	background: #1e6f0a;
 	animation: back linear infinite 3s;
 }
 @keyframes back {
-	25%{
+	20%{
 		background-color: lime;
 	}
-	50%{
+	40%{
 		background-color: rgb(78, 9, 156);
 	}
-	75%{
+	60%{
 		background-color: rgb(207, 12, 165);
 	}
-	100%{
-		background-color: rgb(13, 10, 168);
+	80%{
+		background-color: rgb(136, 10, 17);
 	}
-}
+	100%{
+		background-color: rgb(231, 210, 15);
+	}
+
+	}
 .cube {
-	width: 200px;
-	height: 200px;
+	width: 20rem;
+	height: 20rem;
 	position: relative;
 	transform-style: preserve-3d;
+	align-items: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
 	animation: rotate 12s linear infinite;
 }
 
@@ -49,30 +54,30 @@ img {
 
 /* Applying styles to each face */
 .box1 {
-	transform: translateZ(100px);
+	transform: translateZ(10rem);
 }
 
 .box2 {
-	transform: rotateY(90deg) translateX(100px);
+	transform: rotateY(90deg) translateX(10rem);
 	transform-origin: right;
 }
 
 .box3 {
-	transform: rotateY(180deg) translateZ(100px);
+	transform: rotateY(180deg) translateZ(10rem);
 }
 
 .box4 {
-	transform: rotateY(-90deg) translateX(-100px);
+	transform: rotateY(-90deg) translateX(-10rem);
 	transform-origin: left;
 }
 
 .box5 {
-	transform: rotateX(-90deg) translateY(-100px);
+	transform: rotateX(-90deg) translateY(-10rem);
 	transform-origin: top;
 }
 
 .box6 {
-	transform: rotateX(90deg) translateY(100px);
+	transform: rotateX(90deg) translateY(10rem);
 	transform-origin: bottom;
 }
 
@@ -96,6 +101,179 @@ img {
 	}
 }
 
+
+
+/* ----------------- circle animation start ----------------*/
+
+.circleBody{
+display:flex;
+}
+
+.circle{
+height:12rem;
+width:13.8rem;
+background-color:rgba(28,36,27,0.5);
+margin:0.7rem;
+border-radius:50%;
+animation:circle infinite 4s linear;
+}
+
+.circle2{
+height:10rem;
+width:13rem;
+background-color:rgba(20,6,7,0.5);
+margin:0.7rem;
+border-radius:50%;
+animation:circle2 infinite 6s linear;
+}
+.circle3{
+height:8rem;
+width:9rem;
+background-color:rgba(28,36,97,0.5);
+margin:0.7rem;
+border-radius:50%;
+animation:circle3 infinite 11s linear;
+}
+.circle4{
+height:6rem;
+width:7rem;
+background-color:rgba(28,89,27,0.5);
+margin:0.7rem;
+border-radius:50%;
+animation:circle4 infinite 10s linear;
+}
+.circle5{
+height:9.8rem;
+width:11rem;
+background-color:rgba(28,36,77,0.5);
+margin:0.7rem;
+border-radius:50%;
+animation:circle5 infinite 7s linear;
+}
+.circle6{
+height:12rem;
+width:14rem;
+background-color:rgba(02,36,80,0.5);
+margin:0.7rem;
+border-radius:50%;
+animation:circle6 infinite 9s linear;
+}
+.circle7{
+height:11rem;
+width:13.0rem;
+background-color:rgba(28,96,27,0.5);
+margin:0.7rem;
+border-radius:50%;
+animation:circle7 infinite 8s linear;
+}
+
+
+
+/* ------------------ circle animation working start -----------------------*/
+
+
+/* ------------------ circle animation working start -----------------------*/
+
+@keyframes circle {
+0%{
+transform:translateY(0rem);
+} 100%{
+transform:translateY(-90.8rem);
+}
+}
+
+@keyframes circle2 {
+0%{
+transform:translateY(0rem);
+} 100%{
+transform:translateY(-90.8rem);
+}
+}
+
+@keyframes circle3 {
+0%{
+transform:translateY(0rem);
+} 100%{
+transform:translateY(-908rem);
+}
+}
+
+@keyframes circle4 {
+0%{
+transform:translateY(0rem);
+} 100%{
+transform:translateY(-908rem);
+}
+}
+@keyframes circle5 {
+0%{
+transform:translateY(0rem);
+} 100%{
+transform:translateY(-90.8rem);
+}
+}
+@keyframes circle6 {
+0%{
+transform:translateY(0rem);
+} 100%{
+transform:translateY(-90.8rem);
+}
+}
+@keyframes circle7 {
+0%{
+transform:translateY(0rem);
+} 100%{
+transform:translateY(-90.8rem);
+}
+}
+
+/* ------------------ circle animation working end-----------------------*/
+
+#capText{
+text-transform: uppercase;
+color: white;	
+font-family: cursive;
+animation: text linear infinite 1s;
+}
+
+@keyframes text {
+0%{
+	opacity: 0;
+}
+100%{
+	opacity: 1;
+}
+}
+/*---------- RWD start ---------------------*/
+html{
+	font-size: 62.5%
+}
+
+@media screen and (max-width:900px) {
+	html{
+		font-size: 60%;
+	}
+}
+
+
+@media screen and (max-width:700px) {
+	html{
+		font-size: 50%;
+	}
+}
+
+@media screen and (max-width:600px) {
+	html{
+		font-size: 40%;
+	}
+}
+
+@media screen and (max-width:500px) {
+	html{
+		font-size: 35%;
+	}
+}
+/*---------- RWD end ---------------------*/
 </style>
 <head>
 	<meta charset="UTF-8">
@@ -109,40 +287,66 @@ img {
 </head>
 
 <body>
-	<div class="cube">
+<br><br>	
+<center>
+	<h2 id="capText"> Hello Everyone My name is Diposh Chandra Sarker </h2>
+</center>
+	<br><br><br><br>	<br><br>		<br><br>	<br><br>	
+	<center>
+		<div class="cube">
 
-		<!-- Creating 6 divs for each face of the cube -->
-
-		<div class="box box1">
-			<img src= "rotate1.jpeg"
-				alt="image 1">
+			<!-- Creating 6 divs for each face of the cube -->
+	
+			<div class="box box1">
+				<img src= "rotate1.jpeg"
+					alt="image 1">
+			</div>
+	
+			<div class="box box2">
+				<img src="rotate2.jpeg"
+					alt="image 2">
+			</div>
+	
+			<div class="box box3">
+				<img src="rotate3.jpeg"
+					alt="image 3">
+			</div>
+	
+			<div class="box box4">
+				<img src="rotate4.jpg"
+					alt="image 4">
+			</div>
+	
+			<div class="box box5">
+				<img src="rotate5.jpeg"
+					alt="image 5">
+			</div>
+	
+			<div class="box box6">
+				<img src="rotate6.jpeg"
+					alt="image 6">
+			</div>
 		</div>
+	</center>
 
-		<div class="box box2">
-			<img src="rotate2.jpeg"
-				alt="image 2">
-		</div>
-
-		<div class="box box3">
-			<img src="rotate3.jpeg"
-				alt="image 3">
-		</div>
-
-		<div class="box box4">
-			<img src="rotate4.jpg"
-				alt="image 4">
-		</div>
-
-		<div class="box box5">
-			<img src="rotate5.jpeg"
-				alt="image 5">
-		</div>
-
-		<div class="box box6">
-			<img src="rotate6.jpeg"
-				alt="image 6">
-		</div>
-	</div>
+	<br><br>	<br><br>	<br><br>	<br><br>	<br><br>	<br><br>	
+<!-- ------------------- Circle animation start  ---------------------- -->
+<div class="circleBody"> 
+<div class="circle"> </div>
+<div class="circle2"> </div>
+<div class="circle3"> </div>
+<div class="circle4"> </div>
+<div class="circle5"> </div>
+<div class="circle6"> </div>
+<div class="circle7"> </div>
+<div class="circle4"> </div>
+<div class="circle6"> </div>
+<div class="circle3"> </div>
+<div class="circle"> </div>
+<div class="circle5"> </div>
+<div class="circle4"> </div>
+</div>
+<!-- ------------------- Circle animation end ---------------------- -->
 </body>
 
 </html>
