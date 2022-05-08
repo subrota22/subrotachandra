@@ -5,6 +5,22 @@
           #bd{
               background-image: linear-gradient(indigo , cyan , #454fff);
           }
+        
+        #brother{
+          text-align:center;
+          color:white;
+          font-family:cursive;
+          animation: brother linear infinite 2s ;
+        }
+        @keyframes brother {
+        
+          0%{
+            opacity:0;
+          } 100%{
+          opacity:1;
+          }
+        }
+        
       </style>
       <!--Bootstrap Link-->
       <link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -19,6 +35,10 @@
       <title> About me</title>
   </head>
   <body id="bd">
+    
+    <h2 id="brother"> 
+        <a href="diposh/diposh.html" target="blank" > Visit My Brother Profile  </a>
+    </h2>
       <?php
       session_start();
       session_regenerate_id();
