@@ -1,0 +1,89 @@
+<html>
+<style>
+body{
+background-color:yellow;
+}
+.form , .button {
+height:50px;
+width:287px;
+border-radius:15px;
+background-color:white;
+font-size:20px;
+border:none;
+text-align:center;
+
+}
+.form2{
+background-color:lime;
+margin:auto;
+padding:25px;
+width:350px;
+justify-content:center;
+margin-bottom:30px;
+}
+.fhead{
+width:400px;
+height:50px;
+background-color:cyan;
+color:white;
+justify-content:center;
+margin:auto;
+text-align:center;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+.button:hover{
+background-color:cyan;
+color:white;
+}
+
+</style>
+<head>
+<title>  parcentage </title>
+<link rel="icon" href="image/icon.jpg"/>
+</head>
+<body>
+<marquee direction="left">
+<h2 style="color:lime;"> Welcome our shopping site </h2> 
+<br><br>
+</marquee>
+<div class="fhead"> 
+<h2> Product buy form </h2>
+</div>
+<form method="post" action="/productDiscount.php" class="form2">
+<input type="number" class="form"   min="0" max="10" onchange="productPriceCount(this.value)" required/>
+<br><br>
+<input type="text" class="form" id ="productPrice"  disabled/>
+<br><br> 
+<input type="submit" value="Buy" class="button"/>
+</form>
+
+<script type="text/javascript">
+
+alert(" Welcome our shopping site ") ;
+const firstNumber = prompt ("enter your total price : ") ;
+const secondNumber = prompt ("enter discount offer : ") ;
+const parcentage = firstNumber / 100 ;
+const discountOffer = secondNumber * parcentage  ;
+const total = firstNumber - discountOffer ;
+alert(" Your discount offer is : " + total) ;
+
+
+//---------- count price ----------//
+
+function productPriceCount(count) {
+let countPrice = document.querySelector('#productPrice');
+let countHere = count * 250 ;
+let percentPrice = countHere / 100 ;
+let discountPrice = 25 * percentPrice ;
+let offerPrice = countHere - discountPrice ;
+countPrice.value = " You have to pay : " + offerPrice + " TK" ;
+}
+
+//======= End ======= // 
+</script>
+</body>
+</html>
+
+

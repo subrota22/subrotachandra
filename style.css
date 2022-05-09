@@ -1,0 +1,178 @@
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+background-color:rgba(56,54,69,0.6);
+background-size:cover;
+background-attachment:fixed;
+}
+html{
+font-size:62.5%;
+}
+.protfolioBody{
+width:100%;
+height:auto;
+background-color:rgba(45,28,69,0.7);
+}
+
+/*-------- Head style start  --------*/
+
+.protfolioBody > .head{
+width:100%;
+height:auto;
+background-color:rgba(05,08,09,0.8);
+padding:2.5rem;
+display:flex;
+}
+
+.protfolioBody > .head > .image{
+width:30%;
+height:auto;
+margin-right:2rem;
+}
+
+.protfolioBody > .head > .about{
+width:30%;
+height:auto;
+margin-left:10rem;
+}
+
+.protfolioBody > .head > .siteLink{
+width:40%;
+height:auto;
+margin-left:20rem;
+float:right;
+font-size:2rem;
+}
+.proImage{
+height:12rem;
+width:14rem;
+border-radius:50%;
+border:0.3rem solid lime;
+}
+.protfolioBody > .head > .about >  .name{
+font-size:2.4rem;
+color:white;
+font-family:cursive;
+}
+a{
+text-decoration:none;
+}
+.protfolioBody > .head > .about > .subText{
+font-size:1.8rem;
+color:white;
+font-family:cursive;
+}
+.protfolioBody > .head > .siteLink > a{
+text-decoration:none;
+margin-top:0.5rem;
+}
+/*-------- Head style end--------*/
+
+/*-------- info start -------*/
+.info{
+width:100%;
+background-color:lime;
+color:white;
+font-size:2.4rem;
+display:flex;
+text-align:center;
+padding:1.2rem;
+}
+.title{
+width:20%;
+}
+.name{
+width:20%;
+}
+.infoHead{
+color:blue;
+font-size:2.8rem;
+text-align:center;
+}
+/*-------- info end --------*/
+
+/*-------- cv text start  --------*/
+.cvText{
+color:white;
+background-color:lime;
+font-size:1.8rem;
+padding:1.8rem;
+text-align:center;
+}
+/*-------- cv text end  --------*/
+
+/*-------- footer start  --------*/
+.footerText{
+height:20rem;
+width:100%;
+background-color:rgba(05 , 08 , 06 , 0.5);
+font-size:1.8rem;
+text-align:center;
+display:flex;
+text-decoration:none;
+}
+li{
+list-style-type:none;
+list-style-position:inside;
+}
+.protfolioBody > .footerTex > .website {
+text-decoration:none;
+margin:2.3rem;
+}
+.footerText > ul > li {
+list-style-type:none;
+list-style-position:inside;
+float:left;
+margin:10rem;
+justify-content:center;
+font-size:2rem;
+}
+/*-------- footer end --------*/
+
+/*-------- RWD start --------*/
+
+@media screen and (max-width:1000px){
+
+html{
+display:flex;
+flex-direction:row;
+font-size:50%;
+color:lime;
+}
+}
+
+@media screen and (max-width:800px){
+
+html{
+flex-direction:row;
+font-size:30%;
+color:white;
+}
+.cvText  {
+background-color:cyan;
+color:red;
+}
+}
+
+@media screen and (max-width:500px){
+
+html{
+display:flex;
+flex-direction:row;
+font-size:30%;
+color:red;
+background-color:red;
+}
+.cvText {
+background-color:white;
+color:lime;
+}
+.footerText > ul  > li {
+margin:6rem;
+}
+}
+/*-------- RWD end--------*/

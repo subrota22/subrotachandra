@@ -1,0 +1,222 @@
+<html> 
+<style>
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+::root{
+--background-color:green;
+--font-size:2rem;
+--color:white;
+}
+body{
+max-height:120vh;
+justify-content:center;
+display:flex;
+margin:auto;
+background-color: rgba(12,25,30,0.8);
+}
+.back-body{
+height:500px;
+width:450px;
+background-color: rgba(12,25,30,0.8);
+border-top-left-radius:28rem;
+border-top-right-radius:28rem;
+border-bottom-left-radius:2rem;
+border-bottom-right-radius:2rem;
+margin:100px;
+box-shadow:0 0 0 2rem darkblue;
+}
+.clockBody{
+height:300px;
+width:350px;
+background-color: rgba(12,25,30,0.5);
+box-shadow:
+0 0 0 10px rgba(12,25,30,0.5) ,
+0 0 0 20px rgba(12,25,30,0.5) ,
+0 0 0 30px rgba(12,25,30,0.5) ;
+justify-content:center;
+display:flex;
+margin:5rem;
+border-radius:50%;
+transform:translateY(-1.3rem);
+}
+
+
+.clockBody::before{
+content:""; /* { content:''; } ------- conten will be null ------- */
+height:2.5rem;
+width:2.5rem;
+background-color:lime;
+border-radius:50%;
+border:0.3rem solid white ;
+transform:translateY(14rem);
+justify-content:center;
+display:flex-start;
+position:absolute;
+}
+#hour{
+height:8rem;
+width:0.5rem;
+background-color:red;
+border-radius:3rem;
+transform:translateY(8rem);
+}
+#minute{
+height:10rem;
+width:0.4rem;
+background-color:yellow;
+border-radius:3rem;
+transform:translateY(7rem);
+}
+#second{
+height:10.5rem;
+width:3px;
+background-color:green;
+border-radius:3rem;
+transform:translateY(8rem);
+}
+/*---------- fix postion of time ------------*/
+#hour , #minute , #second{
+justify-content:center;
+display:flex-start;
+position:absolute;
+
+}
+
+
+
+/* --------------- calculation -------------- */
+.clockBody > span {
+inset:2rem;
+position:absolute;
+transform:rotate( calc(30deg * var(--i)) ) ;
+
+ /* ============ {  calc }  rotate(calc(30deg * var (--i))) ============== */
+}
+.clockBody > span > b {
+color:green;
+font-size:2.5rem;
+justify-content:center;
+display:flex;
+transform:rotate( calc(-30deg * var(--i)) ) ;
+}
+/* --------------- digital clock -------------- */
+#digitalClock{
+background-color:rgba(12,25,30,0.5);
+display:flex;
+justify-content:center;
+border-radius:2rem;
+height:5rem;
+width:18rem;
+text-align:center;
+margin:auto;
+padding:1.5rem;
+color:lime;
+font-size:2rem;
+font-family:cursive;
+}
+/* -------------------------- RWD start ------------------------- */
+html{
+font-size:62.5%;
+}
+
+@media screen and (max-width:900px) {
+html{
+font-size:50%;
+}
+}
+
+
+@media screen and (max-width:700px) {
+html{
+font-size:50%;
+}
+}
+
+
+@media screen and (max-width:500px) {
+html{
+font-size:50%;
+}
+}
+
+/* -------------------------- RWD end------------------------- */
+</style>
+<head> 
+<title> Analog clock by sk  </title>
+</head>
+<body>
+<br><br><br><br>
+
+<div class="back-body">
+<div class="clockBody">
+<div id="center"> </div>
+<div id="hourBody"> 
+<div id="hour"> </div>
+</div>
+
+<div id="minuteBody">
+<div id="minute"> </div>
+</div>
+
+<div id="secondBody"> 
+<div id="second"> </div> 
+</div>
+
+<span style="--i:1;"> <b> 1 </b> </span>
+<span style="--i:2;"> <b> 2 </b> </span>
+<span style="--i:3;"> <b> 3 </b> </span>
+<span style="--i:4;"> <b> 4 </b> </span>
+
+<span style="--i:5;"> <b> 5 </b> </span>
+<span style="--i:6;"> <b> 6 </b> </span>
+<span style="--i:7;"> <b> 7 </b> </span>
+<span style="--i:8;"> <b> 8 </b> </span>
+
+<span style="--i:9;"> <b> 9 </b> </span>
+<span style="--i:10;"> <b> 10 </b> </span>
+<span style="--i:11;"> <b> 11 </b> </span>
+<span style="--i:12;"> <b> 12 </b> </span>
+
+</div>
+<br><br>
+
+<div id ="digitalClock"> 00 00 00 </div>
+
+<br><br>
+</div>
+
+<br><br><br><br>
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+setInterval(()=>{
+let hour = document.querySelector("#hourBody");
+let minute = document.querySelector("#minuteBody");
+let second = document.querySelector("#secondBody");
+
+let hourNow = new Date().getHours() * 30 ;
+let minuteNow = new Date().getMinutes() * 6 ;
+let secondNow = new Date().getSeconds()  * 6 ;
+
+//calculation 
+
+hour.style.transform = `rotateZ(${hourNow + (minuteNow/12)}deg)`; 
+minute.style.transform = `rotateZ(${minuteNow}deg)`; 
+second.style.transform = `rotateZ(${secondNow}deg)`; 
+} , 1000)
+
+//----------- digital clock -----------//
+setInterval(()=>{
+
+let time =  document.querySelector("#digitalClock"); 
+let timeNow = new Date().toLocaleTimeString();
+time.innerHTML= timeNow ;
+}, 1000)
+
+</script>

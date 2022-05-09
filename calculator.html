@@ -1,0 +1,337 @@
+<html>
+<style>
+/*---------------- body animation start --------------------*/
+body{
+background-color:rgba(08,05,09,0.5);
+animation:body infinite linear 1s ;
+background-attachment:fixed;
+}
+
+@keyframes body{
+0%{
+background-color:green;
+}
+25%{
+background-color:red;
+}
+50%{
+background-color:blue;
+}
+75%{
+background-color:cyan;
+}
+100%{
+background-color:indigo;
+}
+}
+
+
+/*---------------- body animation end --------------------*/
+
+/* ------------------ Calculator start -----------------------*/
+.form{
+height:370px;
+width:300px;
+background-color:rgba(05,08,09,0.5);
+box-shadow:
+0 0 0 5px rgba(05,08,09,0.5) ,
+0 0 0 10px rgba(05,08,09,0.5) ,
+0 0 0 15px rgba(05,08,09,0.5) ;
+margin:auto;
+border-radius:10px;
+}
+.display{
+height:70px;
+width:300px;
+background-color:rgba(45,85,12,0.5);
+font-size:18px;
+color:white;
+font-family:cursive;
+border:1px solid white;
+border-radius:5px;
+}
+.btn{
+height:60px;
+width:72px;
+background-color:lime;
+text-align:center;
+font-size:15px;
+color:white;
+border:1px solid white;
+}
+.btn:hover{
+background-color:yellow;
+}
+
+.head{
+text-align:center;
+color:white;
+animation:head infinite linear 2s;
+}
+
+@keyframes head{
+to{
+-webkit-background-clip:text;
+color:transparent;
+background-color:linear-gradient (to left , yellow  , green , red );
+}
+}
+
+/* ------------------ Calculator end -----------------------*/
+
+/* ------------------digital clock start  -----------------------*/
+#clock {
+margin:auto;
+width:210px;
+height:50px;
+border-radius:18px;
+background-color:rgba(08,09,07,0.4);
+color:white;
+font-size:20px;
+font-family:cursive;
+padding:10px;
+text-align:center;
+}
+/* ------------------digital clock end -----------------------*/
+
+/* ----------------- circle animation start ----------------*/
+
+.circleBody{
+display:flex;
+}
+
+.circle{
+height:120px;
+width:138px;
+background-color:rgba(28,36,27,0.5);
+margin:7px;
+border-radius:50%;
+animation:circle infinite 4s linear;
+}
+
+.circle2{
+height:100px;
+width:130px;
+background-color:rgba(20,6,7,0.5);
+margin:7px;
+border-radius:50%;
+animation:circle2 infinite 6s linear;
+}
+.circle3{
+height:80px;
+width:90px;
+background-color:rgba(28,36,97,0.5);
+margin:7px;
+border-radius:50%;
+animation:circle3 infinite 3s linear;
+}
+.circle4{
+height:60px;
+width:70px;
+background-color:rgba(28,89,27,0.5);
+margin:7px;
+border-radius:50%;
+animation:circle4 infinite 10s linear;
+}
+.circle5{
+height:98px;
+width:110px;
+background-color:rgba(28,36,77,0.5);
+margin:7px;
+border-radius:50%;
+animation:circle5 infinite 7s linear;
+}
+.circle6{
+height:120px;
+width:140px;
+background-color:rgba(02,36,80,0.5);
+margin:7px;
+border-radius:50%;
+animation:circle6 infinite 9s linear;
+}
+.circle7{
+height:110px;
+width:130px;
+background-color:rgba(28,96,27,0.5);
+margin:7px;
+border-radius:50%;
+animation:circle7 infinite 8s linear;
+}
+/* ------------------ circle animation working start -----------------------*/
+
+@keyframes circle {
+0%{
+transform:translateY(0px);
+} 100%{
+transform:translateY(-908px);
+}
+}
+
+@keyframes circle2 {
+0%{
+transform:translateY(0px);
+} 100%{
+transform:translateY(-908px);
+}
+}
+
+@keyframes circle3 {
+0%{
+transform:translateY(0px);
+} 100%{
+transform:translateY(-908px);
+}
+}
+
+@keyframes circle4 {
+0%{
+transform:translateY(0px);
+} 100%{
+transform:translateY(-908px);
+}
+}
+@keyframes circle5 {
+0%{
+transform:translateY(0px);
+} 100%{
+transform:translateY(-908px);
+}
+}
+@keyframes circle6 {
+0%{
+transform:translateY(0px);
+} 100%{
+transform:translateY(-908px);
+}
+}
+@keyframes circle7 {
+0%{
+transform:translateY(0px);
+} 100%{
+transform:translateY(-908px);
+}
+}
+
+/* ------------------ circle animation working end-----------------------*/
+
+
+/* ------------------ circle animation end -----------------------*/
+
+/* ------------------ link style -----------------------*/
+.link > ul > li {
+list-style-type:none;
+list-style-position:inside;
+float:left;
+margin-left:97px;
+justify-content:center;
+text-align:center;
+}
+#linkText{
+background-color:rgba(08,09,07,0.4);
+height:60px;
+width:auto;
+padding:10px;
+border-radius:10px;
+}
+.link > ul > li > a {
+text-decoration:none;
+}
+</style>
+<head>
+<title> Calculator </title>
+<link rel="icon" href="image/icon.jpg"/>
+</head>
+<body>
+<br><br><br><br>
+<!-- -------------------Digital  Clock start  ---------------------- -->
+<div class="link" id="linkText"> 
+<ul>
+<li> <a href="Clock.html" target="blank"> Analog Clock </a> </li>
+<li> <a href="protfolio.html" target="blank"> My cv </a> </li>
+<li> <a href="percentage.html" target="blank"> Product calculation </a> </li>
+<li> <a href="practice.html" target="blank"> Simple practice  </a> </li>
+<li> <a href="rotate.html" target="blank"> 3d rotate animation </a> </li>
+</ul>
+</div>
+<br><br>
+<div id="clock"> 00 00 00 </div>
+<!-- -------------------Digital  Clock end   ---------------------- -->
+<!-- ------------------- Calculator start  ---------------------- -->
+
+<h2 class="head"> Javascript calculator </h2>
+<br><br>
+<form name="calculator" class="form">
+
+<input type="text" name="display" class="display"/> 
+
+<div>
+<input type="button" value="0" onclick="calculator.display.value+='0'" class="btn" />
+<input type="button" value="1" onclick="calculator.display.value+='1'"  class="btn"/>
+<input type="button" value="2" onclick="calculator.display.value+='2'" class="btn"/>
+<input type="button" value="3" onclick="calculator.display.value+='3'" class="btn"/>
+</div>
+
+<div>
+<input type="button" value="4" onclick="calculator.display.value+='4'" class="btn"/>
+<input type="button" value="5" onclick="calculator.display.value+='5'" class="btn"/>
+<input type="button" value="6" onclick="calculator.display.value+='6' " class="btn"/>
+<input type="button" value="7" onclick="calculator.display.value+='7'" class="btn"/>
+</div>
+
+<div>
+<input type="button" value="8" onclick="calculator.display.value+='8'" class="btn"/>
+<input type="button" value="9" onclick="calculator.display.value+='9'" class="btn"/>
+<input type="button" value="+" onclick="calculator.display.value+='+'" class="btn"/>
+<input type="button" value="--" onclick="calculator.display.value+='-'" class="btn"/>
+</div>
+
+<div>
+<input type="button" value="X" onclick="calculator.display.value+='*'" class="btn"/>
+<input type="button" value="%" onclick="calculator.display.value+='/' " class="btn"/>
+<input type="button" value="DEL" onclick="calculator.display.value=calculator.display.value.slice(0,-1)" class="btn" style="background-color:yellow;"/>
+<input type="button" value="CLR" onclick="calculator.display.value= '' " class="btn" style="background-color:red;"/>
+</div>
+
+<div>
+<input type="button" value=" (" onclick="calculator.display.value+='('" class="btn"/>
+<input type="button" value=")" onclick="calculator.display.value+=')'" class="btn"/>
+<input type="button" value="^" onclick="calculator.display.value+='^'" class="btn"/>
+<input type="button" value="=" onclick="calculator.display.value=eval(calculator.display.value)" class="btn" style="background-color:indigo;"/>
+</div>
+
+</form>
+
+<!-- ------------------- Calculator end  ---------------------- -->
+<br><br>
+<!-- ------------------- Circle animation start  ---------------------- -->
+<div class="circleBody"> 
+<div class="circle"> </div>
+<div class="circle2"> </div>
+<div class="circle3"> </div>
+<div class="circle4"> </div>
+<div class="circle5"> </div>
+<div class="circle6"> </div>
+<div class="circle7"> </div>
+<div class="circle4"> </div>
+<div class="circle6"> </div>
+<div class="circle3"> </div>
+<div class="circle"> </div>
+<div class="circle5"> </div>
+<div class="circle4"> </div>
+</div>
+<!-- ------------------- Circle animation end ---------------------- -->
+<br><br><br><br>
+</body>
+</html>
+
+<script type="text/javascript">
+//--------- digital clock start ---------//
+setInterval(() => { 
+
+var time = document.querySelector('#clock');
+var timeNow = new Date().toLocaleTimeString();
+time.innerHTML = " Time : " + timeNow ;
+
+} , 1000 )
+//--------- digital clock end  ---------//
+</script>

@@ -1,0 +1,247 @@
+<html>
+<style>
+/*--------------- basic setup start ---------------
+*{
+box-sizing:border-box;
+margin:0%;
+padding:0%;
+}
+::root{
+--font-family:sans-serief;
+--font-size:20px;
+--background-color:green;
+--display:flex;
+--justify-content:center;
+}
+
+/*--------------- basic setup end -----------------*
+/*--------------- analog clock start -----------------*/
+.backBody{
+height:540px;
+width:435px;
+background-color:rgba(25,28,39,0.8) ;
+border-top-left-radius:300px;
+border-top-right-radius:300px;
+border-bottom-left-radius:12px;
+border-bottom-right-radius:12px;
+box-shadow:
+0 0 0 10px rgba(08,07,09,0.5),
+ 0 0 0 18px rgba(08,07,09,0.8);
+margin:auto;
+justify-content:center;
+}
+
+.ClockBody{
+top:120px;
+justify-content:center;
+margin:auto;
+text-align:center;
+background-color:rgba(28,65,89,0.5);
+height:355px;
+width:405px;
+display:flex;
+border-radius:50%;
+animation:clock infinite linear 2s ;
+transform:translateY(18px);
+box-shadow:
+0 0 0 12px rgba(28,6,89,0.5) ,
+0 0 0 18px rgba(28,5,89,0.5) ,
+0 0 0 20px rgba(20,65,8,0.5)  ;
+}
+
+ .ClockBody  span{
+ inset:15px;
+ color:white;
+ font-size:20px;
+ position:absoulte;
+ transform:rotate( calc(30deg * var(--i)) ) ;
+}
+
+
+ span  b  {
+ position:absolute;
+ transform:rotate( calc(-30deg * var(--i)) ) ;
+}
+
+
+.ClockBody::before {
+content:'';
+height:18px;
+width:18px;
+border-radius:50%;
+border:none;
+background-color:lime;
+position:absolute;
+transform:translateY(160px);
+box-shadow:0 0 0 2px red , 0 0 0 4px yellow, 0 0 0 6px lime ;
+}
+
+#hour , #minute , #second {
+justify-content:center;
+margin:auto;
+position:absolute;
+display:flex-start;
+box-shadow:0 0 0 2px rgba(08,05,04,0.4) , 0 0 0 4px rgba(08,05,04,0.4) , 0 0 0 6px rgba(08,05,04,0.4) ;
+}
+#hour{
+height:70px;
+width:4px;
+background-color:red;
+border-radius:40px;
+transform:translateY(100px);
+}
+#minute{
+height:85px;
+width:3px;
+background-color:yellow;
+border-radius:40px;
+transform:translateY(97px);
+}
+#second{
+height:108px;
+width:2px;
+background-color:lime;
+border-radius:40px;
+transform:translateY(80px);
+}
+
+/*--------------- analog clock end -----------------*/
+
+/*---------------------------- digital clock start --------------------------------*/
+/*------------- First digital clock ---------*/
+.digitalClock{
+
+height:68px;
+width:255px;
+background-color:blue;
+color:white;
+font-size:28px;
+margin:auto;
+padding:45px;
+border-radius:15px;
+
+}
+#dhour , #dminute , #dsecond {
+margin:15px;
+text-align:center ; 
+}
+#clock{
+color:white;
+margin:auto;
+}
+
+.diClock{
+margin:auto;
+width:188px;
+height:30px;
+border-radius:20px;
+border:none;
+background-color:white;
+color:lime;
+text-align:center;
+padding:20px;
+font-size:25px;
+font-family:cursive;
+box-shadow:
+0 0 0 4px rgba(08,07,09,0.5),
+0 0 0 6px rgba(08,07,09,0.5),
+0 0 0 8px rgba(08,07,09,0.5);
+}
+/*---------------------------- digital clock end --------------------------------*/
+</style>
+<head>
+<title> Analog Clock </title>
+<link rel="icon" href="image/icon.jpg"/>
+</head>
+<body style="background-color:cyan;">
+<br><br><br><br>
+<!-- Digital Clock --> 
+
+<div class="digitalClock"> 
+<div id="clock"> </div>
+<div id="date"> </div>
+</div>
+<br><br><br><br>
+
+<!-- Analog Clock --> 
+
+<div class="backBody">
+<div class="ClockBody">
+<!-- --------------- hour body ------------- --> 
+<div class="hourBody"> 
+<div id="hour" > </div>
+</div>
+<!-- --------------- minute body ------------- --> 
+<div class="minuteBody"> 
+<div id="minute" > </div>
+</div>
+<!-- --------------- second body ------------- --> 
+<div class="secondBody"> 
+<div id="second" > </div>
+</div>
+<!-- --------------- End body ------------- --> 
+<div id="center"> </div>
+
+
+<span  style="--i:1;"> <b> 1  </b>  </span>
+<span  style="--i:2;"><b> 2  </b>  </span>
+<span  style="--i:3;"><b> 3 </b>  </span>
+<span style="--i:4;"> <b> 4  </b>  </span>
+<span  style="--i:5;"> <b> 5  </b>  </span>
+<span style="--i:6;"> <b> 6  </b>  </span>
+<span  style="--i:7;"><b> 7 </b>  </span>
+<span  style="--i:8;"> <b> 8  </b>  </span>
+<span  style="--i:9;"> <b> 9 </b>  </span>
+<span  style="--i:10;"> <b> 10  </b>  </span>
+<span  style="--i:11;"><b> 11  </b>  </span>
+<span  style="--i:12;"> <b> 12  </b>  </span>
+
+
+</div>
+<br><br><br><br><br>
+<div class="diClock">  00 00 00 </div>
+<br><br><br>
+</div>
+<br><br><br><br>
+</body>
+</html>
+
+<script type="text/javascript">
+
+//================ analog clock start  ================= // 
+setInterval(()=>{
+var hour = document.querySelector('#clock');
+var hourNow = new Date().toLocaleTimeString();
+hour.innerHTML = " Time : " + hourNow ;
+})
+
+setInterval(()=>{
+var dhour = document.querySelector('.diClock');
+var dhourNow = new Date().toLocaleTimeString();
+dhour.innerHTML = dhourNow ;
+})
+
+var date= document.querySelector('#date') ;
+var datenow = new Date().toLocaleDateString();
+date.innerHTML = " Date: "  + datenow ;
+
+//================ digital clock end  ================= //
+
+//================ analog clock start  ================= //
+
+setInterval(()=> {
+var hourAnalog = document.querySelector('.hourBody'); 
+var minuteAnalog = document.querySelector('.minuteBody');
+var secondAnalog = document.querySelector('.secondBody');
+
+var hours  =   new Date().getHours() * 30 ;
+var minutes  = new Date().getMinutes() * 6 ;
+var seconds  = new Date().getSeconds() * 6 ;
+
+hourAnalog.style.transform = `rotateZ( ${hours + (minutes/12)}deg)`;
+minuteAnalog.style.transform = `rotateZ(${minutes}deg)`;
+secondAnalog.style.transform = `rotateZ( ${seconds}deg )`;
+
+} , 1000)
+//================ analog clock end ================= //
+</script>
